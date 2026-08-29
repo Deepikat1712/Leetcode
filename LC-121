@@ -1,0 +1,19 @@
+class Solution {
+    public int maxProfit(int[] nums) {
+        int max =0;
+        int min = nums[0];
+        for(int i = 0 ; i<nums.length ; i++){
+            int p = 0;
+            if(min > nums[i]){
+                min = nums[i];
+            }
+        if(nums[i] > min){
+            p = nums[i] - min;
+            if(max < p){
+                max = p;
+            }
+        }
+        }
+        return max;
+    }
+}
